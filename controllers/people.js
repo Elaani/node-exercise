@@ -19,7 +19,7 @@ async function fetchAllSWPeople(
   return sortPeople(urlQuery, resp)
 }
 
-// sorts by height, name, mass, or if there's not query returns the array without sorting
+// sorts by height, name, mass, or if there's no query returns the array without sorting
 function sortPeople(urlQuery, array) {
   if (JSON.stringify(urlQuery) === '{"sort":"height"}') {
     return (_.sortBy(array, (o) => { return parseInt(o.height); }));
